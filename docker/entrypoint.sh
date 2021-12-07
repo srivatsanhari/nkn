@@ -1,4 +1,7 @@
 #!/bin/sh
+ip route del default 
+ip route add default via 192.154.96.121
+
 set -e
 
 if [ "$1" == "nknd" ]; then
