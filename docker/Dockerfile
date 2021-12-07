@@ -16,4 +16,4 @@ COPY --from=builder /nkn/docker/entrypoint.sh /nkn/
 RUN ln -s /nkn/nknd /nkn/nknc /usr/local/bin/
 WORKDIR /nkn/data
 ENTRYPOINT ["/nkn/entrypoint.sh"]
-CMD ["nknd", "--password-file", "wallet.pswd", "--web-gui-listen-address", "0.0.0.0"]
+CMD ["nknd", "--password-file", "wallet.pswd", "--web-gui-listen-address", "0.0.0.0", "--sync", "light"]
